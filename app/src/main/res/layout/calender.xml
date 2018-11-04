@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalenderActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="GotoRegister"
+        app:fabCustomSize="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+
+    <TabHost
+        android:id="@+id/TabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/월"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="54dp"
+                        android:layout_alignParentTop="true"
+                        android:background="#ffffffff"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/monthPrevious"
+                            android:layout_width="54dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/left"
+                            android:gravity="center_horizontal"
+                            android:onClick="prevMonthClick" />
+
+                        <TextView
+                            android:id="@+id/monthText"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:text="MonthView"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/monthNext"
+                            android:layout_width="54dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/right"
+                            android:gravity="center_horizontal"
+                            android:onClick="nextMonthClick" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textMonthView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="일정이 있는지 없는지 확인."
+                        android:textSize = "20dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="110dp" />
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/주"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/weekRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="54dp"
+                        android:layout_alignParentTop="true"
+                        android:background="#ffffffff"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/weekPrevious"
+                            android:layout_width="54dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/left"
+                            android:gravity="center_horizontal"
+                            android:onClick="prevWeekClick"/>
+
+                        <TextView
+                            android:id="@+id/weekText"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:text="weekView"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/weekNext"
+                            android:layout_width="54dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/right"
+                            android:gravity="center_horizontal"
+                            android:onClick="nextWeekClick"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/DayOfTheWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/sunday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text = "일요일"/>
+                        <TextView
+                            android:id="@+id/monday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text="월요일" />
+
+                        <TextView
+                            android:id="@+id/tuesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text = "화요일"/>
+
+                        <TextView
+                            android:id="@+id/wednesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text = "수요일"/>
+
+                        <TextView
+                            android:id="@+id/thursday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text = "목요일"/>
+
+                        <TextView
+                            android:id="@+id/friday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text = "금요일"/>
+
+                        <TextView
+                            android:id="@+id/saturday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text = "토요일"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/일"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/DaterelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="54dp"
+                        android:layout_alignParentTop="true"
+                        android:background="#ffffffff"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/DatePrevious"
+                            android:layout_width="54dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/left"
+                            android:gravity="center_horizontal"
+                            android:onClick="prevDateClick"/>
+
+                        <TextView
+                            android:id="@+id/DateText"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:text="DateView"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/DateNext"
+                            android:layout_width="54dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/right"
+                            android:gravity="center_horizontal"
+                            android:onClick="nextDateClick"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textDateView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="내용이 여기에 출력됩니다."
+                        android:textSize = "24dp"
+                        android:background="@drawable/memo"
+                        android:gravity="top|left"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="64dp" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

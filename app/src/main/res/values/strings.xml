@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Calender</string>
+    <string name="gotoDay">일</string>
+    <string name="gotoMonth">월</string>
+    <string name="gotoWeek">주</string>
+    <string name="registMemo">일정 등록하기</string>
+    <string name="title_activity_intro">IntroActivity</string>
+    <string name="title_activity_calender">CalenderActivity</string>
+    <string name="title_activity_schedule_register2">ScheduleRegister2</string>
+    <string name="title_activity_schedule">schedule</string>
+
+</resources>

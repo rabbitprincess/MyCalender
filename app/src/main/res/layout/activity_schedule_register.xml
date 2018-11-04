@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalenderActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffffff"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/SpinnerMonth"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity ="center"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:entries="@array/Month_spinner"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <Spinner
+            android:id="@+id/SpinnerDay"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="215dp"
+            android:layout_marginLeft="215dp"
+            android:dropDownWidth="match_parent"
+            android:entries="@array/Date_spinner"
+            android:gravity="center"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="153dp"
+            android:layout_marginLeft="153dp"
+            android:gravity="center"
+            android:text="월"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:gravity ="center"
+            android:layout_marginStart="343dp"
+            android:layout_marginLeft="343dp"
+            android:text="일"
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="336dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#ffffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/ReturnToMain"
+            style="@android:style/ButtonBar"
+            android:layout_width="192dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_toStartOf="@+id/RegisterAndReturn"
+            android:layout_toLeftOf="@+id/RegisterAndReturn"
+            android:onClick="GoCancelClick"
+            android:text="취소하기"
+            android:textSize="18dp" />
+
+
+        <Button
+            android:id="@+id/RegisterAndReturn"
+            style="@android:style/ButtonBar"
+            android:layout_width="191dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:onClick="GoRegistClick"
+            android:text="등록하기"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/EditText"
+        android:layout_width="0dp"
+        android:layout_height="339dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/memo"
+        android:gravity="top|left"
+        android:hint="일정을 작성하세요."
+        android:textSize = "24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+
+</android.support.constraint.ConstraintLayout>
