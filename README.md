@@ -2,7 +2,7 @@
 안드로이드 스튜디오에서 작성한 Calendar 예제입니다.
 
 화면은 IntroActivity, CalenderActivity, ScheduleRegister 세 개로 구성되어있습니다.
-ㄼㄷIntroActivity에서 1.3초가 지나면 CalenderActivity로 이동하게 되며, CalenderActivity에서는 월/주/일 세가지의 탭으로 이동할 수 있고, 아래의 +버튼을 더블 클릭해서 ScheduleRegist 화면으로 이동할 수 있습니다.
+IntroActivity에서 1.3초가 지나면 CalenderActivity로 이동하게 되며, CalenderActivity에서는 월/주/일 세가지의 탭으로 이동할 수 있고, 아래의 +버튼을 더블 클릭해서 ScheduleRegist 화면으로 이동할 수 있습니다.
 ScheduleRegister 화면에서는 상단에 '월' 과 '일'을 등록할 수 있는 Spinner 두개가 있고, 중간에 내용을 입력할 수 있는 EditText가 있습니다. 
 아래에는 취소하기, 등록하기 버튼이 있습니다. 취소하기를 누르면 내용을 저장하지 않고, 등록하기를 누르면 내용을 날짜에 저장한 뒤에 CalenderActivater로 들어가게 됩니다.
 
